@@ -118,7 +118,7 @@ const LocationAdvantages = () => {
           {/* Connectivity icon list */}
           <div className="bg-white rounded-xl shadow-md p-8">
             <img
-              src={BannerImg}
+              src={BannerImg.src}
               alt="Plots for sale in Doddaballapur"
               className="w-full h-[70vh] border border-gray-300 object-cover mb-6"
             />
@@ -405,7 +405,7 @@ const LocationAdvantages = () => {
             <div className="absolute inset-0 bg-black opacity-10"></div>
             <div className="relative p-5 md:p-12 text-center">
               <img
-                src={logo}
+                src={logo.src}
                 className="w-[10%] mx-auto mb-2"
                 alt="Plots for sale in North Bangalore"
               />

@@ -76,7 +76,13 @@
 // export default HeroSection;
 
 import React from "react";
-import { Sparkles, Clock, Zap, Award, CheckCircle } from "lucide-react";
+import { 
+  LuSparkles as Sparkles, 
+  LuClock as Clock, 
+  LuZap as Zap, 
+  LuAward as Award 
+} from "react-icons/lu";
+import { FiCheckCircle as CheckCircle } from "react-icons/fi";
 
 /**
  * DHS Doddaballapur Hero Section

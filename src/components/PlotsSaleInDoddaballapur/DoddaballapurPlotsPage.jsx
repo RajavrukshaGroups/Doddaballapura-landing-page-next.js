@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { Helmet } from "react-helmet-async";
+
 import { Container } from "react-bootstrap";
 import MarqueeTicker from "./MarqueeTicker";
 import LocationAdvantages from "./LocationAdvantages";
@@ -9,53 +10,14 @@ import WhyChoose from "./WhyChoose";
 import HeroSection from "./Hero";
 import "./DoddaballapurPlotsPage.css";
 import logo from "../../assets/logo.png";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { LuArrowRight as ArrowRight } from "react-icons/lu";
+import { FiCheckCircle as CheckCircle2 } from "react-icons/fi";
+import Link from "next/link";
 
 const DoddaballapurPlotsPage = () => {
   return (
     <Container fluid className="doddaballapur-page">
-      <Helmet>
-        <title>
-          Residential Plots for Sale in Doddaballapur | Gated Community | A
-          Khata Plots in North Bangalore – Defence Housing Society
-        </title>
-        <meta
-          name="description"
-          content="Explore residential plots for sale in Doddaballapur with premium gated community living in North Bangalore. Discover A Khata plots with excellent connectivity, modern amenities, and investment potential at Defence Housing Society."
-        />
-        <link
-          rel="canonical"
-          href="https://defencehousingsociety.co.in/"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id":
-                "https://defencehousingsociety.co.in/",
-            },
-            headline: "Plots for Sale in Doddaballapur",
-            image: ["https://defencehousingsociety.co.in/logo.png"],
-            author: {
-              "@type": "Organization",
-              name: "Defence Housing Society",
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "Defence Housing Society",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://defencehousingsociety.co.in/logo.png",
-              },
-            },
-            datePublished: "2026-06-17",
-            dateModified: "2026-06-17",
-          })}
-        </script>
-      </Helmet>
+
 
       {/* ===== 1. Hero Banner ===== */}
       <HeroSection />
@@ -79,14 +41,14 @@ const DoddaballapurPlotsPage = () => {
             Kempegowda International Airport, the region has become a preferred
             choice for residential investments. If you are searching for{" "}
             <Link
-              to="/"
+              href="/"
               className="font-bold text-[#24457b] hover:text-red-800 transition-colors"
             >
               Residential Plots for Sale in Doddaballapur
             </Link>{" "}
             or{" "}
             <Link
-              to="/"
+              href="/"
               className="font-bold text-[#24457b] hover:text-red-800 transition-colors"
             >
               Gated Community Plots for Sale in North Bangalore
@@ -713,7 +675,7 @@ const DoddaballapurPlotsPage = () => {
 
               <p className="text-gray-600 text-lg leading-relaxed max-w-4xl mx-auto">
                 <Link
-                  to="/"
+                  href="/"
                   className="font-bold text-[#24457b] hover:text-red-800 transition-colors"
                 >
                   Defence Housing Society

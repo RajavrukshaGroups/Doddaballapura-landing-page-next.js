@@ -1,5 +1,6 @@
+"use client";
 import React, { useState, useEffect } from "react";
-import { Phone } from "lucide-react";
+import { FiPhone } from "react-icons/fi";
 import sitLogo from "../assets/logo.png";
 
 const Navbar = () => {
@@ -27,7 +28,7 @@ const Navbar = () => {
           {/* Left: Logo */}
           <div className="flex-1 flex justify-start transition-all duration-500 ">
             <img
-              src={sitLogo}
+              src={sitLogo.src}
               alt="DHS Logo"
               className={`object-contain transition-all duration-500 ${
                 isScrolled ? "h-14 w-14" : "h-20 w-20"
@@ -78,7 +79,7 @@ const Navbar = () => {
                 isScrolled ? "p-1.5" : "p-2 ml-16"
               }`}
             >
-              <Phone size={isScrolled ? 18 : 22} fill="currentColor" />
+              <FiPhone size={isScrolled ? 18 : 22} fill="currentColor" />
             </div>
             <div className="flex flex-col">
               <a
@@ -104,8 +105,8 @@ const Navbar = () => {
       >
         <div className="flex items-center gap-2">
           <img
-            src={sitLogo}
-            alt="DHS Logo"
+            src={sitLogo.src}
+            alt="Defence Habitat Logo"
             className="h-12 w-12 object-contain"
             onError={(e) =>
               (e.currentTarget.src = "https://via.placeholder.com/100?text=DHS")
@@ -128,7 +129,7 @@ const Navbar = () => {
           href="tel:+918884735735"
           className="text-white bg-[#e91e63] p-2 rounded-full shadow-sm active:scale-95 transition-transform"
         >
-          <Phone size={20} fill="currentColor" />
+          <FiPhone size={20} fill="currentColor" />
         </a>
       </div>
     </>

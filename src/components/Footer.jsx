@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import { FiFacebook, FiInstagram, FiTwitter, FiLinkedin } from 'react-icons/fi';
 import logo from '../assets/logo.png'
@@ -20,7 +21,7 @@ const Footer = () => {
             {/* Logo */}
             <div className="bg-white rounded-full p-1.5 shadow-lg inline-block mb-4">
               <img
-                src={logo}
+                src={logo.src}
                 alt="Defence Habitat"
                 className="h-16 w-16 object-contain rounded-full"
                 onError={(e) => {

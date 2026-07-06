@@ -3,13 +3,13 @@ import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import "./DoddaballapurPlotsPage.css";
 import {
-  LandPlot,
-  PencilRuler,
-  TrendingUp,
-  Wallet,
-  ShieldCheck,
-  Trees,
-} from "lucide-react";
+  LuLandPlot as LandPlot,
+  LuPencilRuler as PencilRuler,
+  LuTrendingUp as TrendingUp,
+  LuWallet as Wallet,
+  LuShieldCheck as ShieldCheck,
+  LuTrees as Trees,
+} from "react-icons/lu";
 const benefits = [
   {
     icon: LandPlot,

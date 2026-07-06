@@ -89,15 +89,15 @@
 
 import React from "react";
 import { 
-  Plane, 
-  TrendingUp, 
-  School, 
-  Percent, 
-  Leaf, 
-  Route, 
-  ArrowUpRight, 
-  Sparkles 
-} from "lucide-react";
+  LuPlane as Plane, 
+  LuTrendingUp as TrendingUp, 
+  LuSchool as School, 
+  LuPercent as Percent, 
+  LuLeaf as Leaf, 
+  LuRoute as Route, 
+  LuArrowUpRight as ArrowUpRight, 
+  LuSparkles as Sparkles 
+} from "react-icons/lu";
 //import { DRIVER_DATA } from "../data";
 
 const DRIVER_DATA = [
