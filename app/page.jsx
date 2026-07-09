@@ -1,7 +1,7 @@
 import DoddaballapurPlotsPage from "../src/components/PlotsSaleInDoddaballapur/DoddaballapurPlotsPage";
 
 export const metadata = {
-  title: "Residential Plots for Sale in Doddaballapur | Gated Community | A Khata Plots in North Bangalore – Defence Housing Society",
+  title: "Residential Plots for Sale in Doddaballapur | Gated Community | A Khata Plots in North Bangalore",
   description: "Explore residential plots for sale in Doddaballapur with premium gated community living in North Bangalore. Discover A Khata plots with excellent connectivity, modern amenities, and investment potential at Defence Housing Society.",
   alternates: {
     canonical: "https://defencehousingsociety.co.in/",
