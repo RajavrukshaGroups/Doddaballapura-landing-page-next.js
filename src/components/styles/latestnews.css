@@ -1,0 +1,249 @@
+.marasandra-page {
+  padding: 0;
+  width: 100%;
+}
+
+.banner-latest {
+  background-image: url("../../images/HR-4.webp");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 260px;
+  min-height: 260px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .banner-latest {
+    height: 320px;
+    min-height: 320px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .banner-latest {
+    height: 360px;
+    min-height: 360px;
+  }
+}
+
+.banner-latest::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15); /* Light, bright tint */
+  z-index: 1;
+}
+
+.banner-content3 {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.banner-content3 h1 {
+  color: #ffffff;
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.85), 0 6px 25px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) {
+  .banner-content3 h1 {
+    font-size: 3rem;
+    letter-spacing: 2.5px;
+  }
+}
+
+.marquee {
+  background: #000;
+  color: #fff;
+  padding: 12px;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+/* Property Card - Centered, Soft Shadow, Full Professional Look */
+.property-card-latest {
+  margin: 40px auto !important;
+  padding: 30px !important;
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+  max-width: 1140px !important;
+  width: calc(100% - 30px) !important;
+  position: relative !important;
+  z-index: 2 !important;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.latest-news-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.latest-news-left {
+  flex: 1;
+  width: 100%;
+}
+
+.ct {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #1e3a60 !important;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.title-divider {
+  width: 70px;
+  height: 3px;
+  background-color: #24457b;
+  margin: 6px 0 24px 0;
+  border-radius: 2px;
+}
+
+/* Two Column Grid for Bullets */
+.news-bullets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem 3rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .news-bullets-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Bullet list alignment: Bullet aligns with the FIRST line of text */
+.custom-bullet {
+  position: relative;
+  padding-left: 24px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #334155 !important;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.custom-bullet::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  top: 0.15em; /* Aligns bullet with the top/first line of text */
+  font-size: 1.1rem;
+  color: #1e3a60;
+  line-height: 1;
+}
+
+.latest-news-line {
+  margin-top: 15px;
+  font-size: 1.02rem;
+  color: #334155 !important;
+}
+
+/* Blinking Red Pill Badge */
+.latest-badge {
+  background-color: #ef4444;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  animation: blink 4s infinite;
+  margin-left: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.2;
+}
+
+.pdf-link {
+  color: #0a58ca;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.pdf-link:hover {
+  color: #063a85;
+}
+
+/* Newspaper Grid */
+.press-thumbnail {
+  width: 100%;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.press-thumbnail:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.press-thumbnail img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.press-thumbnail-note {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 8px;
+  text-align: center;
+}
+
+@keyframes blink {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.15;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner-content3 {
+    padding: 0;
+  }
+
+  .ct {
+    text-align: center;
+  }
+
+  .title-divider {
+    margin: 6px auto 20px auto;
+  }
+
+  .property-card-latest {
+    margin: 20px auto !important;
+    padding: 20px !important;
+    max-width: 100% !important;
+  }
+}

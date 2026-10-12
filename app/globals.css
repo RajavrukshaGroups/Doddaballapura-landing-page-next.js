@@ -8,6 +8,14 @@
   --code-bg: #f4f3ec;
 }
 
+/* Fix Tailwind CSS v4 .collapse { visibility: collapse } conflict with Bootstrap navbar */
+#navbar .collapse,
+#navbar .navbar-collapse,
+.navbar-collapse.collapse,
+.collapse.show {
+  visibility: visible !important;
+}
+
 body {
   margin: 0;
   font-family: system-ui, 'Segoe UI', Roboto, sans-serif;

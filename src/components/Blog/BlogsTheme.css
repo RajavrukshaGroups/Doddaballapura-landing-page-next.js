@@ -1,0 +1,504 @@
+/* ===== Exact Theme Styles matching User Reference Image ===== */
+
+.blogs-wrapper {
+  background-color: #FAF8F5;
+  color: #334155;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* Serif font class matching screenshot */
+.font-serif-title {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Breadcrumbs */
+.blog-breadcrumbs-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #94A3B8;
+  text-transform: uppercase;
+}
+
+.blog-breadcrumbs-nav a {
+  color: #64748B;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.blog-breadcrumbs-nav a:hover {
+  color: #162A45;
+}
+
+/* Search input */
+.blog-search-box {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+}
+
+.blog-search-input {
+  width: 100%;
+  background-color: #FFFFFF;
+  border: 1px solid #E2D9CC;
+  border-radius: 10px;
+  padding: 10px 14px 10px 38px;
+  font-size: 13px;
+  color: #1E293B;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.blog-search-input:focus {
+  border-color: #C9A86A;
+  box-shadow: 0 0 0 3px rgba(201, 168, 106, 0.15);
+}
+
+.blog-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94A3B8;
+  font-size: 14px;
+}
+
+/* Blog Card */
+.blog-card {
+  background: #FFFFFF;
+  border: 1px solid #EFE9DF;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(22, 42, 69, 0.07);
+}
+
+.blog-card-img-wrap {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #E2E8F0;
+}
+
+.blog-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-card-img {
+  transform: scale(1.05);
+}
+
+/* Category Badge on Card */
+.blog-pill-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(246, 239, 230, 0.95);
+  color: #8C5816;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Card Body */
+.blog-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.blog-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  color: #94A3B8;
+  margin-bottom: 10px;
+}
+
+.blog-card-title {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #162A45;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card:hover .blog-card-title {
+  color: #B28236;
+}
+
+.blog-card-excerpt {
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #64748B;
+  margin-bottom: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.blog-card-readmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #B28236;
+  text-decoration: none;
+  transition: color 0.2s, transform 0.2s;
+  margin-top: auto;
+}
+
+.blog-card-readmore:hover {
+  color: #785215;
+  transform: translateX(2px);
+}
+
+/* Sidebar Widgets */
+.blog-widget-box {
+  background: #FFFFFF;
+  border: 1px solid #EFE9DF;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.blog-widget-heading {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #162A45;
+  margin-bottom: 16px;
+}
+
+/* Categories List */
+.blog-category-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #F1ECE4;
+  color: #475569;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.blog-category-item:last-child {
+  border-bottom: none;
+}
+
+.blog-category-item:hover,
+.blog-category-item.active {
+  color: #B28236;
+  font-weight: 600;
+}
+
+.blog-category-count {
+  font-size: 12px;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+/* CTA Card - Your Dream Plot Awaits */
+.blog-cta-dark-card {
+  background: #12243C;
+  border-radius: 16px;
+  padding: 30px 24px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-bottom: 24px;
+  box-shadow: 0 10px 24px rgba(18, 36, 60, 0.15);
+}
+
+.blog-cta-dark-btn {
+  background: #D4A373;
+  color: #12243C;
+  font-size: 12.5px;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 16px;
+}
+
+.blog-cta-dark-btn:hover {
+  background: #E2B68A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 163, 115, 0.3);
+}
+
+/* Recent Posts widget */
+.blog-recent-post-item {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #F1ECE4;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+.blog-recent-post-item:last-child {
+  border-bottom: none;
+}
+
+.blog-recent-thumb {
+  width: 58px;
+  height: 58px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.blog-recent-title {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #162A45;
+  margin-bottom: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-recent-post-item:hover .blog-recent-title {
+  color: #B28236;
+}
+
+.blog-recent-date {
+  font-size: 11px;
+  color: #94A3B8;
+}
+
+/* Pagination */
+.blog-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.blog-page-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748B;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.blog-page-btn:hover {
+  color: #162A45;
+}
+
+.blog-page-btn.active {
+  background: #C9A86A;
+  color: #FFFFFF;
+}
+
+/* ===== Details Page Specifics ===== */
+.blog-details-hero-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 24px 0 32px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .blog-details-hero-img {
+    height: 250px;
+  }
+}
+
+.blog-detail-heading {
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #162A45;
+  margin-top: 36px;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.blog-detail-body p {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #475569;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .blog-detail-body p {
+    text-align: left;
+  }
+}
+
+/* Pull quote */
+.blog-pull-quote {
+  background: #FAF4EC;
+  border-radius: 14px;
+  padding: 24px 28px;
+  margin: 32px 0;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  border-left: 4px solid #C9A86A;
+}
+
+.blog-pull-quote-mark {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  line-height: 1;
+  color: #C9A86A;
+  font-weight: bold;
+}
+
+.blog-pull-quote-text {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 16.5px;
+  line-height: 1.65;
+  color: #2C3E50;
+  margin: 0;
+}
+
+/* Table of Contents sidebar widget */
+.blog-toc-numbered-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  color: #475569;
+  font-size: 12.5px;
+  line-height: 1.45;
+  text-decoration: none;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.blog-toc-numbered-item:hover {
+  color: #B28236;
+}
+
+.blog-toc-num-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #F4EBE0;
+  color: #8C5816;
+  font-size: 10.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Interested in Plots CTA card */
+.blog-interested-box {
+  background: #F7EFE5;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.blog-interested-btn {
+  background: #C9A86A;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  transition: background-color 0.2s;
+}
+
+.blog-interested-btn:hover {
+  background: #B28236;
+}
+
+/* Share icons */
+.blog-share-icons-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.blog-share-icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 1px solid #E2D9CC;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.blog-share-icon-btn:hover {
+  background: #162A45;
+  border-color: #162A45;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}

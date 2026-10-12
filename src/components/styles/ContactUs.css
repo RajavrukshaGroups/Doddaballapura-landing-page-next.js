@@ -1,0 +1,436 @@
+.contactus {
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  background-color: #ffffff;
+}
+
+/* Banner (Screenshot 1) */
+.banner-contact {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 260px;
+}
+
+.banner-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.banner-content-contact {
+  position: relative;
+  z-index: 2;
+}
+
+.banner-content-contact h1 {
+  color: #ffffff !important;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Main Content Container */
+.contact-content {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 20px 80px 20px !important;
+}
+
+/* Quote Heading (Screenshot 1) */
+.contact-quote {
+  font-size: 1.35rem !important;
+  color: #111827 !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 30px;
+  margin-bottom: 45px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Two-column layout (Screenshot 2 & 3: Form on Left, Contact Details on Right) */
+.contact-form-details-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 50px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .contact-form-details-row {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 36px;
+  }
+}
+
+.contact-form-col {
+  width: 100%;
+}
+
+.contact-details-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Left Column: Form Container (Screenshot 2 & 3) */
+.contact-form-container {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 32px 28px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.contact-form-container .form-heading {
+  color: #111827 !important;
+  font-size: 1.45rem !important;
+  font-weight: 600 !important;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Form inputs */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group.full-width {
+  flex: 100%;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #111827;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+.form-group textarea {
+  min-height: 125px;
+  resize: none;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* reCAPTCHA wrapper */
+.recaptcha-wrapper {
+  margin-top: 4px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Checkbox */
+.checkbox-group {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  cursor: pointer;
+  margin: 0 !important;
+  user-select: none;
+}
+
+.declaration-input,
+.checkbox-label input[type="checkbox"] {
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 !important;
+  cursor: pointer;
+  accent-color: #1c3d73;
+  flex-shrink: 0;
+  border: 1px solid #9ca3af !important;
+  border-radius: 3px !important;
+}
+
+.checkbox-text {
+  font-size: 13.5px !important;
+  color: #374151 !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+}
+
+.checkbox-text a {
+  color: #0d6efd !important;
+  text-decoration: underline !important;
+}
+
+.checkbox-text a:hover {
+  color: #0b5ed7 !important;
+}
+
+/* Send Button (Screenshot 3 - Centered navy button) */
+.submit-button {
+  display: block;
+  margin: 20px auto 0 auto;
+  width: auto;
+  min-width: 110px;
+  padding: 9px 36px;
+  background-color: #1c3d73;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.submit-button:hover {
+  background-color: #162f59;
+}
+
+.submit-button:active {
+  transform: translateY(1px);
+}
+
+/* Right Column: Contact Details (Screenshot 2) */
+.info-card {
+  border: 1px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  background: #ffffff !important;
+  padding: 32px 24px !important;
+  margin-bottom: 35px;
+}
+
+.contact-info-item {
+  padding: 0;
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info-heading {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.contact-blue-icon {
+  color: #007bff !important;
+  font-size: 17px !important;
+  width: 17px;
+  height: 17px;
+}
+
+.contact-info-text {
+  color: #111827;
+  font-size: 14.5px;
+  line-height: 1.45;
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+}
+
+.contact-info-link {
+  color: #111827 !important;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 400;
+  transition: color 0.15s ease;
+}
+
+.contact-info-link:hover {
+  color: #007bff !important;
+  text-decoration: underline;
+}
+
+/* QR Code Section (Screenshot 3) */
+.scan-location {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.scan-heading {
+  font-size: 1.15rem !important;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: 0.5px;
+  line-height: 1.35;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.scan-image img {
+  width: 175px;
+  height: 175px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Bottom Section: Map & CRM (Screenshot 4) */
+.map-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  align-items: stretch;
+}
+
+@media (min-width: 900px) {
+  .map-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+.map-col,
+.crm-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-container {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  height: 100%;
+  min-height: 840px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 840px;
+  border: 0;
+  display: block;
+}
+
+.crm-iframe-container {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px 20px;
+  border: 1px solid #e5e7eb;
+  height: 100%;
+  min-height: 840px;
+  box-sizing: border-box;
+}
+
+.crm-heading {
+  font-size: 1.35rem !important;
+  font-weight: 600;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .banner-contact {
+    min-height: 200px;
+    padding: 50px 15px;
+  }
+
+  .banner-content-contact h1 {
+    font-size: 1.9rem;
+  }
+
+  .contact-content {
+    padding: 20px 15px 50px 15px !important;
+  }
+
+  .contact-quote {
+    font-size: 1.15rem !important;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .contact-form-container {
+    padding: 24px 18px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .map-container iframe {
+    min-height: 380px;
+  }
+
+  .crm-iframe-container {
+    padding: 20px 15px;
+  }
+}

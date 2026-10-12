@@ -1,139 +1,134 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { FiPhone } from "react-icons/fi";
-import sitLogo from "../assets/logo.png";
+import Link from "next/link";
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import "./header.css";
+import sitLogo from "../images/logo.png";
 
-const Navbar = () => {
+function CustomNavbar() {
+  const [isDownloadDropdownOpen, setDownloadDropdownOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isPast20 = window.scrollY > 20;
+          setIsScrolled((prev) => (prev !== isPast20 ? isPast20 : prev));
+
+          const navbar = document.getElementById("navbar");
+          if (navbar) {
+            const isPast50 = window.scrollY > 50;
+            if (isPast50 && !navbar.classList.contains("navbar-small")) {
+              navbar.classList.add("navbar-small");
+            } else if (!isPast50 && navbar.classList.contains("navbar-small")) {
+              navbar.classList.remove("navbar-small");
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLinkClick = () => {
+    setExpanded(false);
+    setDownloadDropdownOpen(false);
+  };
+
   return (
-    <>
-      {/* Top Corporate Header - Desktop */}
-      <header
-        className={`hidden md:flex flex-col w-full z-[100] sticky top-0 transition-all duration-500 ease-in-out border-b border-gray-100 ${
-          isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-lg py-1"
-            : "bg-white py-3"
-        }`}
-      >
-        <div className="container mx-auto px-4 flex justify-between items-center transition-all duration-500">
-          {/* Left: Logo */}
-          <div className="flex-1 flex justify-start transition-all duration-500 ">
-            <img
-              src={sitLogo.src}
-              alt="DHS Logo"
-              className={`object-contain transition-all duration-500 ${
-                isScrolled ? "h-14 w-14" : "h-20 w-20"
-              }`}
-              onError={(e) =>
-                (e.currentTarget.src =
-                  "https://via.placeholder.com/150/0f3460/ffffff?text=DHS")
-              }
-            />
-          </div>
-
-          {/* Center: Corporate Text */}
-          <div className="flex-3 flex flex-col items-center justify-center px-2 transition-all duration-500 ">
-            <h1
-              className={`text-[#1e2f5eff] font-condensed font-bold uppercase tracking-tighter leading-none text-center scale-y-110 transition-all duration-500 ${
-                isScrolled ? "text-xl lg:text-2xl" : "text-2xl lg:text-2xl"
-              }`}
-            >
-              DEFENCE HABITAT HOUSING CO-OPERATIVE SOCIETY LTD.
-            </h1>
-            <h2
-              className={`text-[#1e2f5eff] font-bold mt-1 text-center font-serif leading-tight transition-all duration-500 ${
-                isScrolled ? "text-xs lg:text-sm" : "text-sm lg:text-sm"
-              }`}
-            >
-              ಡಿಫೆನ್ಸ್ ಹ್ಯಾಬಿಟಾಟ್ ಹೌಸಿಂಗ್ ಕೋ-ಆಪರೇಟಿವ್ ಸೊಸೈಟಿ ಲಿ.
-            </h2>
-            <div
-              className={`text-center transition-all duration-500 ${
-                isScrolled ? "mt-0.5" : "mt-1"
-              }`}
-            >
-              <span
-                className={`text-[#dc2626] font-sans font-bold uppercase tracking-tight transition-all duration-500 ${
-                  isScrolled ? "text-sm lg:text-base" : "text-base lg:text-base"
-                }`}
-              >
-                Reg. No.:-{" "}
-                <span className="text-[#dc2626]">HSG-3/64/HHS/53744</span>
-              </span>
-            </div>
-          </div>
-
-          {/* Right: Phone */}
-          <div className="flex-1 flex justify-end items-center gap-3 ">
-            <div
-              className={`bg-[#e91e63] rounded-full text-white shadow-md transform hover:scale-110 transition-all duration-500 ${
-                isScrolled ? "p-1.5" : "p-2 ml-16"
-              }`}
-            >
-              <FiPhone size={isScrolled ? 18 : 22} fill="currentColor" />
-            </div>
-            <div className="flex flex-col">
-              <a
-                href="tel:+918884735735 "
-                className={`font-sans font-bold text-[#0f3460] leading-none hover:text-[#e91e63] transition-all duration-500 whitespace-nowrap ${
-                  isScrolled ? "text-lg lg:text-xl" : "text-xl lg:text-2xl"
-                }`}
-              >
-                +91 8884735735
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Mobile Header - Compact */}
-      <div
-        className={`md:hidden w-full py-2 px-4 flex justify-between items-center border-b border-slate-200 z-[100] sticky top-0 transition-all duration-300 ${
-          isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-md"
-            : "bg-white shadow-sm"
-        }`}
-      >
-        <div className="flex items-center gap-2">
+    <Navbar
+      id="navbar"
+      className="navbar-custom custom-sticky"
+      expand="lg"
+      expanded={expanded}
+      onToggle={setExpanded}
+    >
+      <Container className="navbar-container">
+        <Navbar.Brand as={Link} href="/" className="navbar-brand-custom" onClick={handleLinkClick}>
           <img
-            src={sitLogo.src}
-            alt="Defence Habitat Logo"
-            className="h-12 w-12 object-contain"
-            onError={(e) =>
-              (e.currentTarget.src = "https://via.placeholder.com/100?text=DHS")
-            }
+            src={sitLogo?.src || sitLogo}
+            alt="DHS Logo"
+            className={`navbar-logo-img ${isScrolled ? "scrolled" : ""}`}
+            onError={(e) => {
+              e.currentTarget.src =
+                "https://via.placeholder.com/150/0f3460/ffffff?text=DHS";
+            }}
           />
-          <div className="flex flex-col text-center">
-            <span className="font-condensed font-bold text-navy-900 text-[10px] leading-tight">
-              DEFENCE HABITAT HOUSING CO-OPERATIVE SOCIETY LTD.
-            </span>
-            <h2 className="text-navy-900 font-bold text-[8px] mt-1 text-center font-serif leading-tight transition-all duration-500">
-              ಡಿಫೆನ್ಸ್ ಹ್ಯಾಬಿಟಾಟ್ ಹೌಸಿಂಗ್ ಕೋ-ಆಪರೇಟಿವ್ ಸೊಸೈಟಿ ಲಿ.
-            </h2>
-            <span className="text-[10px] text-red-600 font-bold leading-tight">
-              Reg No: HSG-3/64/HHS/53744
-            </span>
-          </div>
-        </div>
-        <a
-          // href="tel:+918188992266 "
-          href="tel:+918884735735"
-          className="text-white bg-[#e91e63] p-2 rounded-full shadow-sm active:scale-95 transition-transform"
-        >
-          <FiPhone size={20} fill="currentColor" />
-        </a>
-      </div>
-    </>
-  );
-};
+        </Navbar.Brand>
 
-export default Navbar;
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
+        <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse-custom">
+          <Nav className="nav-custom">
+            <Nav.Item className="nav-item-custom">
+              <Nav.Link as={Link} href="/" className="nav-link-custom" onClick={handleLinkClick}>
+                Home
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="nav-item-custom">
+              <Nav.Link as={Link} href="/about-us" className="nav-link-custom" onClick={handleLinkClick}>
+                About Us
+              </Nav.Link>
+            </Nav.Item>
+            <NavDropdown
+              title="Download"
+              id="nav-dropdown-download"
+              className="nav-item-custom nav-dropdown-custom"
+              onMouseEnter={() => setDownloadDropdownOpen(true)}
+              onMouseLeave={() => setDownloadDropdownOpen(false)}
+              show={isDownloadDropdownOpen}
+            >
+              <NavDropdown.Item
+                as={Link}
+                href="/download/brochure"
+                className="dropdown-item-custom"
+                onClick={handleLinkClick}
+              >
+                Brochure Download
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item
+                as={Link}
+                href="/download/application"
+                className="dropdown-item-custom"
+                onClick={handleLinkClick}
+              >
+                Application Download
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Item className="nav-item-custom">
+              <Nav.Link as={Link} href="/latest-news" className="nav-link-custom" onClick={handleLinkClick}>
+                Latest News
+                <span className="notification-badge">New</span>
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="nav-item-custom">
+              <Nav.Link as={Link} href="/blogs" className="nav-link-custom" onClick={handleLinkClick}>
+                Blogs
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="nav-item-custom">
+              <Nav.Link as={Link} href="/contact-us" className="nav-link-custom" onClick={handleLinkClick}>
+                Contact Us
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item className="nav-item-custom">
+              <Nav.Link as={Link} href="/gallery" className="nav-link-custom" onClick={handleLinkClick}>
+                Gallery
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
+
+export default CustomNavbar;

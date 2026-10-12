@@ -1,9 +1,38 @@
 "use client";
 import React from 'react';
-import { FiFacebook, FiInstagram, FiTwitter, FiLinkedin } from 'react-icons/fi';
+import Link from 'next/link';
+import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import logo from '../assets/logo.png'
 
 const Footer = () => {
+  const socialLinks = [
+    {
+      name: "Facebook",
+      icon: FaFacebookF,
+      url: "https://www.facebook.com/defencehabitat",
+      hoverClass: "hover:bg-[#1877F2] hover:text-white",
+    },
+    {
+      name: "X (Twitter)",
+      icon: FaXTwitter,
+      url: "https://x.com/DefenceSociety",
+      hoverClass: "hover:bg-black hover:text-white",
+    },
+    {
+      name: "Instagram",
+      icon: FaInstagram,
+      url: "https://www.instagram.com/defence_habitat/",
+      hoverClass: "hover:bg-[#E4405F] hover:text-white",
+    },
+    {
+      name: "WhatsApp",
+      icon: FaWhatsapp,
+      url: "https://api.whatsapp.com/send/?phone=918884413931&text&app_absent=0",
+      hoverClass: "hover:bg-[#25D366] hover:text-white",
+    },
+  ];
+
   return (
     <footer className="bg-[#0f3460] text-slate-400 py-16 border-t border-navy-800 relative overflow-hidden">
       
@@ -45,13 +74,30 @@ const Footer = () => {
             A premium residential project committed to providing high-quality living spaces in North Bangalore.
           </p>
 
+          {/* Quick Links */}
+          <div className="flex flex-wrap gap-4 md:gap-6 justify-center items-center text-xs md:text-sm font-medium text-slate-300">
+            
+            <Link href="/privacy-policy" className="hover:text-amber-400 transition-colors">Privacy Policy</Link>
+            <span className="text-slate-600">•</span>
+            <Link href="/terms-and-conditions" className="hover:text-amber-400 transition-colors">Terms &amp; Conditions</Link>
+            <span className="text-slate-600">•</span>
+            <Link href="/copyright-policy" className="hover:text-amber-400 transition-colors">Copyright Policy</Link>
+            {/* <span className="text-slate-600">•</span>
+            <Link href="/blogs" className="hover:text-amber-400 transition-colors">Blogs</Link>
+            */}
+          </div>
+
           {/* Social Icons */}
-          <div className="flex gap-4 justify-center">
-            {[FiFacebook, FiInstagram, FiTwitter, FiLinkedin].map((Icon, i) => (
+          <div className="flex gap-4 justify-center items-center">
+            {socialLinks.map(({ name, icon: Icon, url, hoverClass }) => (
               <a
-                key={i}
-                href="#"
-                className="w-10 h-10 rounded-full bg-navy-800 flex items-center justify-center hover:bg-gold-400 hover:text-navy-900 transition-all transform hover:-translate-y-1"
+                key={name}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={name}
+                title={name}
+                className={`w-10 h-10 rounded-full bg-[#162d4a] text-slate-300 flex items-center justify-center transition-all duration-300 transform hover:-translate-y-1 shadow-md ${hoverClass}`}
               >
                 <Icon size={18} />
               </a>

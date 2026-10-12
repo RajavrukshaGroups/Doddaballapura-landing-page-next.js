@@ -1,6 +1,8 @@
 import "./globals.css";
 import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
+import ScrollToTopButton from "../src/components/ScrollToTopButton";
+import FloatingWhatsApp from "../src/components/FloatingWhatsApp";
 
 export const metadata = {
   title: "Plots For sale In Doddaballapur",
@@ -44,6 +46,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <ScrollToTopButton />
+        <FloatingWhatsApp />
       </body>
     </html>
   );

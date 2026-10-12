@@ -10,6 +10,7 @@ import { CiPhone } from "react-icons/ci";
 import toast from "react-hot-toast";
 import { FaPaperPlane } from "react-icons/fa";
 import ReCAPTCHA from "react-google-recaptcha";
+import { API_ENDPOINTS } from "../services/api";
 
 const ContactFormPopup = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -129,7 +130,7 @@ const ContactFormPopup = () => {
 
     try {
       const res = await fetch(
-        "https://adminpanel.defencehousingsociety.com/defenceWebsiteRoutes/contactus",
+        API_ENDPOINTS.CONTACT_US,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -282,33 +283,33 @@ const ContactFormPopup = () => {
                 </div>
 
                 {/* Terms */}
-                <div className="flex gap-0 items-start">
+                <div className="flex gap-2 items-center">
                   <input
                     type="checkbox"
                     checked={acceptTerms}
                     onChange={handleChange}
-                    className="mr-1 mt-1"
+                    className="w-4 h-4 rounded cursor-pointer accent-[#007bff] shrink-0"
                   />
-                  <p className="text-xs text-gray-600">
+                  <p className="text-xs text-gray-700 m-0">
                     I accept the{" "}
                     <a
-                      href="https://defencehousingsociety.com/terms-conditions"
+                      href="/terms-and-conditions"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-semibold underline"
+                      className="text-[#007bff] underline"
                     >
-                      Terms
+                      Terms and Conditions
                     </a>{" "}
-                    &
+                    and{" "}
                     <a
-                      href="https://defencehousingsociety.com/privacy-policy"
+                      href="/privacy-policy"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-semibold underline"
+                      className="text-[#007bff] underline"
                     >
-                      {" "}
                       Privacy Policy
                     </a>
+                    .
                   </p>
                 </div>
 

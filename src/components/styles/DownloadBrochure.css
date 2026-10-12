@@ -1,0 +1,203 @@
+.download-brochure-container {
+  width: 100%;
+  padding: 40px 16px 80px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 200px);
+}
+
+.download-brochure-card {
+  width: 100%;
+  max-width: 760px;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 18px !important;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06) !important;
+  padding: 40px 36px !important;
+  margin: 0 auto;
+}
+
+.download-brochure-card h1 {
+  color: #1e3a60;
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.download-brochure-card h1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3.5px;
+  background: #f59e0b;
+  border-radius: 2px;
+}
+
+.download-brochure-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  font-size: 14.5px;
+  color: #1e293b;
+  background-color: #f8fafc !important;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: #2563eb !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* Checkbox styling */
+.checkbox-group {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  cursor: pointer;
+  margin: 0 !important;
+  user-select: none;
+}
+
+.declaration-input,
+.checkbox-label input[type="checkbox"] {
+  width: 17px !important;
+  height: 17px !important;
+  min-width: 17px !important;
+  min-height: 17px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  cursor: pointer;
+  accent-color: #007bff;
+  flex-shrink: 0;
+  border: 1px solid #94a3b8 !important;
+  border-radius: 3px !important;
+  background-color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+.checkbox-text {
+  font-size: 15px !important;
+  color: #111827 !important;
+  line-height: 1.4 !important;
+  font-weight: 400 !important;
+  display: inline !important;
+}
+
+.checkbox-text a {
+  color: #007bff !important;
+  text-decoration: underline !important;
+  font-weight: 400 !important;
+  transition: color 0.2s ease;
+}
+
+.checkbox-text a:hover {
+  color: #0056b3 !important;
+}
+
+/* Download Button */
+.button-container {
+  margin-top: 10px;
+}
+
+.download-button {
+  width: 100%;
+  padding: 14px 24px !important;
+  background: linear-gradient(135deg, #1e3a60 0%, #2563eb 100%) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px;
+  color: #ffffff !important;
+  cursor: pointer;
+  transition: all 0.25s ease !important;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-button:hover {
+  background: linear-gradient(135deg, #162d4a 0%, #1d4ed8 100%) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+}
+
+.download-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .download-brochure-container {
+    padding: 30px 12px 60px 12px;
+  }
+
+  .download-brochure-card {
+    padding: 28px 20px !important;
+    border-radius: 14px !important;
+  }
+
+  .download-brochure-card h1 {
+    font-size: 1.65rem;
+    margin-bottom: 24px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .checkbox-text {
+    font-size: 14px !important;
+  }
+}
