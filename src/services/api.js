@@ -7,7 +7,7 @@
  */
 
 const LIVE_BASE_URL = "https://adminpanel.defencehousingsociety.com/defenceWebsiteRoutes";
-const LOCAL_BASE_URL = "http://localhost:4000/defenceWebsiteRoutes";
+//const LOCAL_BASE_URL = "http://localhost:4000/defenceWebsiteRoutes";
 
 // In production (npm run build), defaults to false (LIVE_BASE_URL).
 // In development (npm run dev), defaults to true (LOCAL_BASE_URL).
