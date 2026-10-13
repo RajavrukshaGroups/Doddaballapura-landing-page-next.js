@@ -27,28 +27,23 @@ const DownloadApplication = () => {
         data,
       );
 
-      if (response.status === 200) {
+      if (response.status === 200 || response.status === 201) {
         window.open(
           "https://res.cloudinary.com/den0iz8zn/image/upload/v1755582287/DEFENCE_HABITAT_SOCIETY__Application_ztkc0q.pdf",
           "_blank",
         );
-        toast.success("Form submitted and PDF downloaded!");
+        toast.success("Application form submitted and PDF opened!");
         reset();
+      } else {
+        toast.error("Failed to submit application. Please try again.");
       }
     } catch (error) {
-      console.warn("Backend API error, falling back to application PDF:", error);
-      try {
-        window.open(
-          "https://res.cloudinary.com/den0iz8zn/image/upload/v1755582287/DEFENCE_HABITAT_SOCIETY__Application_ztkc0q.pdf",
-          "_blank",
-        );
-        toast.success("Application form opened successfully!");
-        reset();
-        return;
-      } catch (fallbackErr) {
-        console.error("Fallback error:", fallbackErr);
-      }
-      toast.error("Error submitting form. Please try again.");
+      console.error("API Error submitting application:", error);
+      const serverMessage =
+        error.response?.data?.message ||
+        error.response?.data?.error ||
+        "Server connection error: Unable to submit application form. Please try again later.";
+      toast.error(serverMessage);
     } finally {
       setIsLoading(false);
     }

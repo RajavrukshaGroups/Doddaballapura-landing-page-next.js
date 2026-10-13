@@ -26,25 +26,21 @@ const DownloadBrochure = () => {
         data,
         { responseType: "blob" },
       );
-      const blob = new Blob([response.data], { type: "application/pdf" });
-      saveAs(blob, "DHS_Brochure.pdf");
-      toast.success("Brochure downloaded successfully!");
-      reset();
-    } catch (error) {
-      console.warn("Backend brochure API error, falling back to local brochure:", error);
-      try {
-        const fallbackRes = await fetch("/DHS_Brochure_V5.pdf");
-        if (fallbackRes.ok) {
-          const blob = await fallbackRes.blob();
-          saveAs(blob, "DHS_Brochure.pdf");
-          toast.success("Brochure downloaded successfully!");
-          reset();
-          return;
-        }
-      } catch (fallbackError) {
-        console.error("Fallback download error:", fallbackError);
+      if (response.status === 200 || response.status === 201) {
+        const blob = new Blob([response.data], { type: "application/pdf" });
+        saveAs(blob, "DHS_Brochure.pdf");
+        toast.success("Brochure downloaded successfully!");
+        reset();
+      } else {
+        toast.error("Failed to download brochure. Please try again.");
       }
-      toast.error("Failed to download brochure. Please try again.");
+    } catch (error) {
+      console.error("API Error downloading brochure:", error);
+      const serverMessage =
+        error.response?.data?.message ||
+        error.response?.data?.error ||
+        "Server connection error: Unable to submit brochure request. Please try again later.";
+      toast.error(serverMessage);
     } finally {
       setIsLoading(false);
     }
