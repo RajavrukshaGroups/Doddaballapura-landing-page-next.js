@@ -3,6 +3,7 @@ import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
 import ScrollToTopButton from "../src/components/ScrollToTopButton";
 import FloatingWhatsApp from "../src/components/FloatingWhatsApp";
+import BottomLeftVideoPlayer from "../src/components/FloatingVideo/BottomLeftVideoPlayer";
 
 export const metadata = {
   title: "Plots For sale In Doddaballapur",
@@ -48,6 +49,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <ScrollToTopButton />
         <FloatingWhatsApp />
+        <BottomLeftVideoPlayer />
       </body>
     </html>
   );

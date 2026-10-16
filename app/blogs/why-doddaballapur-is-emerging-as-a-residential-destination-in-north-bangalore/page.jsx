@@ -1,5 +1,6 @@
 import BlogsContainer from "../../../src/components/Blog/BlogsContainer";
 
+
 export const metadata = {
   title: "Why Doddaballapur Is Emerging as a Residential Destination in North Bangalore | Defence Housing Society",
   description: "North Bangalore has steadily evolved from an overlooked peripheral zone into one of the city's most closely watched residential corridors. Discover why Doddaballapur is gaining attention for plotted developments.",

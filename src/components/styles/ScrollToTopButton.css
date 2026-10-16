@@ -24,7 +24,7 @@
   opacity: 1;
   pointer-events: auto;
   background-color: black;
-  bottom: 4rem;
+  bottom: 5.5rem;
 }
 
 .scroll-to-top:hover {
@@ -40,5 +40,8 @@
     font-size: 20px;
     bottom: 10px;
     right: 10px;
+  }
+  .scroll-to-top.visible {
+    bottom: 4.8rem;
   }
 }
