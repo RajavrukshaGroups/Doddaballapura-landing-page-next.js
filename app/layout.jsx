@@ -55,6 +55,10 @@ const websiteSchema = {
   "@context": "https://schema.org/",
   "@type": "WebSite",
   "name": "Defence Habitat Housing Society",
+  "alternateName": [
+    "Defence Housing Society",
+    "Defence Habitat"
+  ],
   "url": "https://defencehousingsociety.co.in/",
   "potentialAction": {
     "@type": "SearchAction",
