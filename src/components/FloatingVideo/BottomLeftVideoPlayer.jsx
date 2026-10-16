@@ -291,33 +291,6 @@ const BottomLeftVideoPlayer = () => {
       {/* ------------------------------------------------------------------ */}
       {isOpen && !isFullView && (
         <div className="bottom-left-video-card shadow-2xl">
-          {/* Header Bar */}
-          <div className="video-card-header">
-            <div className="video-card-title-group">
-              <span className="live-dot" />
-              <span className="video-project-tag">Tapasihalli Phase 1 Video</span>
-            </div>
-
-            <div className="video-card-actions">
-              <button
-                className="card-action-btn fullview-btn"
-                onClick={openFullView}
-                title="Full View"
-                aria-label="Full View"
-              >
-                <Maximize2 size={14} />
-              </button>
-              <button
-                className="card-action-btn close-btn"
-                onClick={handleCloseMini}
-                title="Close"
-                aria-label="Close"
-              >
-                <X size={15} />
-              </button>
-            </div>
-          </div>
-
           {/* Video Preview Container */}
           <div
             className="video-preview-wrapper"
@@ -336,42 +309,27 @@ const BottomLeftVideoPlayer = () => {
               className="mini-video-element"
             />
 
-            {/* Subtle Gradient Overlays */}
+            {/* Hover-only Controls Overlay */}
             <div className="video-preview-overlay">
-              {/* Top Banner on Video */}
-              <div className="overlay-top">
-                {/* <span className="project-sub-tag">Defence Habitat</span> */}
-              </div>
-
-              {/* Bottom Quick Controls */}
               <div
-                className="overlay-bottom"
+                className="mini-hover-actions"
                 onClick={(e) => e.stopPropagation()}
               >
-                <div className="quick-controls-left">
-                  <button
-                    className="quick-icon-btn"
-                    onClick={togglePlay}
-                    title={isPlaying ? "Pause" : "Play"}
-                  >
-                    {isPlaying ? <Pause size={14} /> : <Play size={14} />}
-                  </button>
-                  <button
-                    className="quick-icon-btn"
-                    onClick={toggleMute}
-                    title={isMuted ? "Unmute" : "Mute"}
-                  >
-                    {isMuted ? <VolumeX size={14} /> : <Volume2 size={14} />}
-                  </button>
-                </div>
-
                 <button
-                  className="quick-fullview-chip"
+                  className="mini-hover-btn fullview-btn"
                   onClick={openFullView}
-                  title="Expand to Full View"
+                  title="Full View"
+                  aria-label="Full View"
                 >
-                  <Maximize2 size={12} className="mr-1" />
-                  Full View
+                  <Maximize2 size={15} />
+                </button>
+                <button
+                  className="mini-hover-btn close-btn"
+                  onClick={handleCloseMini}
+                  title="Close"
+                  aria-label="Close"
+                >
+                  <X size={16} />
                 </button>
               </div>
             </div>

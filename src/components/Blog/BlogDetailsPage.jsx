@@ -1,4 +1,7 @@
+"use client";
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
 import {
   Calendar,
   Clock,
@@ -17,6 +20,36 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { RELATED_BLOGS_DATA } from '../../data/blogsData';
 import { Breadcrumbs } from './Breadcrumbs';
+
+const markdownComponents = {
+  a: ({ node, href, children, ...props }) => {
+    const isInternal = href && (href.startsWith('/') || href.startsWith('#'));
+    if (isInternal) {
+      return (
+        <Link
+          href={href}
+          className="text-[#a57b32] font-semibold underline underline-offset-2 hover:text-[#886221] cursor-pointer transition-colors"
+          {...props}
+        >
+          {children}
+        </Link>
+      );
+    }
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-[#a57b32] font-semibold underline underline-offset-2 hover:text-[#886221] cursor-pointer transition-colors"
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  },
+  p: ({ children }) => <span className="inline leading-relaxed">{children}</span>,
+  strong: ({ children }) => <strong className="font-semibold text-stone-900">{children}</strong>,
+};
 
 export const BlogDetailsPage = ({
   post,
@@ -203,26 +236,9 @@ export const BlogDetailsPage = ({
               <div className="space-y-5 text-base sm:text-lg text-stone-700 leading-relaxed font-sans mb-10">
                 {post.content.introduction.map((para, idx) => (
                   <p key={idx} className={idx === 0 ? 'text-stone-900 leading-relaxed font-normal' : ''}>
-                    {/* Render with highlighted links matching the image */}
-                    {para.includes('locations') || para.includes('Doddaballapur') ? (
-                      <span>
-                        {para.split('locations').map((part, pIdx, arr) => (
-                          <React.Fragment key={pIdx}>
-                            {part}
-                            {pIdx < arr.length - 1 && (
-                              <button
-                                onClick={onOpenEnquire}
-                                className="text-[#a57b32] underline hover:text-[#886221] cursor-pointer font-medium"
-                              >
-                                locations
-                              </button>
-                            )}
-                          </React.Fragment>
-                        ))}
-                      </span>
-                    ) : (
-                      para
-                    )}
+                    <ReactMarkdown components={markdownComponents}>
+                      {para}
+                    </ReactMarkdown>
                   </p>
                 ))}
               </div>
@@ -263,25 +279,9 @@ export const BlogDetailsPage = ({
                       key={pIdx}
                       className="text-base text-stone-700 leading-relaxed font-sans"
                     >
-                      {p.includes('Plots for sale in Doddaballapur') ? (
-                        <span>
-                          {p.split('Plots for sale in Doddaballapur').map((frag, fIdx, fArr) => (
-                            <React.Fragment key={fIdx}>
-                              {frag}
-                              {fIdx < fArr.length - 1 && (
-                                <button
-                                  onClick={onOpenEnquire}
-                                  className="text-[#a57b32] font-semibold underline hover:text-[#886221] cursor-pointer"
-                                >
-                                  Plots for sale in Doddaballapur
-                                </button>
-                              )}
-                            </React.Fragment>
-                          ))}
-                        </span>
-                      ) : (
-                        p
-                      )}
+                      <ReactMarkdown components={markdownComponents}>
+                        {p}
+                      </ReactMarkdown>
                     </p>
                   ))}
 
@@ -311,6 +311,22 @@ export const BlogDetailsPage = ({
                       <p className="text-sm text-stone-700 leading-relaxed">
                         {section.highlightBox.description}
                       </p>
+                    </div>
+                  )}
+
+                  {/* Closing Paragraphs if available */}
+                  {section.closingParagraphs && (
+                    <div className="space-y-4 pt-2">
+                      {section.closingParagraphs.map((cp, cpIdx) => (
+                        <p
+                          key={cpIdx}
+                          className="text-base text-stone-700 leading-relaxed font-sans"
+                        >
+                          <ReactMarkdown components={markdownComponents}>
+                            {cp}
+                          </ReactMarkdown>
+                        </p>
+                      ))}
                     </div>
                   )}
                 </section>
