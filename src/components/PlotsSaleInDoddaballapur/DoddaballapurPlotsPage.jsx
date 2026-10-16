@@ -680,7 +680,7 @@ const DoddaballapurPlotsPage = () => {
                 >
                   Defence Housing Society
                 </Link>{" "}
-                offers thoughtfully planned plotted developments designed for
+                offers Residential Plots in Doddaballapur, designed for
                 modern living, long-term value, and future growth.
               </p>
 

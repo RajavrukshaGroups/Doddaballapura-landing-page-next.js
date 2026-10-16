@@ -25,6 +25,44 @@ export const metadata = {
   manifest: "/fevicons/site.webmanifest",
 };
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org/", 
+  "@type": "BreadcrumbList", 
+  "itemListElement": [{
+    "@type": "ListItem", 
+    "position": 1, 
+    "name": "Residential Plots in Doddaballapur",
+    "item": "https://defencehousingsociety.co.in/"  
+  },{
+    "@type": "ListItem", 
+    "position": 2, 
+    "name": "Gallery",
+    "item": "https://defencehousingsociety.co.in/gallery"  
+  },{
+    "@type": "ListItem", 
+    "position": 3, 
+    "name": "Latest News",
+    "item": "https://defencehousingsociety.co.in/latest-news"  
+  },{
+    "@type": "ListItem", 
+    "position": 4, 
+    "name": "New updates",
+    "item": "https://defencehousingsociety.co.in/blogs"  
+  }]
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebSite",
+  "name": "Defence Habitat Housing Society",
+  "url": "https://defencehousingsociety.co.in/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://defencehousingsociety.co.in/blogs/top-reasons-to-buy-residential-plots-in-doddaballapur{search_term_string}Residential Plots in North Bangalore",
+    "query-input": "required name=search_term_string"
+  }
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -40,6 +78,20 @@ export default function RootLayout({ children }) {
 
               gtag('config', 'G-XHJY1T4MDY');
             `
+          }}
+        />
+        {/* BreadcrumbList Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbSchema),
+          }}
+        />
+        {/* WebSite Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
           }}
         />
       </head>
