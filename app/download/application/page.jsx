@@ -5,13 +5,13 @@ export const metadata = {
   description:
     "Download the official membership application form for Defence Habitat Housing Co-Operative Society Ltd to apply for residential plots and site bookings.",
   alternates: {
-    canonical: "https://defencehousingsociety.com/download/application",
+    canonical: "https://defencehousingsociety.co.in/download/application",
   },
   openGraph: {
     title: "Download Application | Defence Habitat Housing Co-Operative Society Ltd",
     description:
       "Download the official membership application form for Defence Habitat Housing Co-Operative Society Ltd to apply for residential plots and site bookings.",
-    url: "https://defencehousingsociety.com/download/application",
+    url: "https://defencehousingsociety.co.in/download/application",
     type: "website",
   },
 };

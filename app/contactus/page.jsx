@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Get in touch with Defence Housing Society for inquiries, support, membership information. Contact our team today.",
   alternates: {
-    canonical: "https://defencehousingsociety.com/contact-us",
+    canonical: "https://defencehousingsociety.co.in/contact-us",
   },
 };
 

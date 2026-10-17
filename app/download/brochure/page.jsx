@@ -5,13 +5,13 @@ export const metadata = {
   description:
     "Download the official project brochure of Defence Habitat Housing Co-Operative Society Ltd to learn more about layout plans, amenities, and location advantages.",
   alternates: {
-    canonical: "https://defencehousingsociety.com/download/brochure",
+    canonical: "https://defencehousingsociety.co.in/download/brochure",
   },
   openGraph: {
     title: "Download Brochure | Defence Habitat Housing Co-Operative Society Ltd",
     description:
       "Download the official project brochure of Defence Habitat Housing Co-Operative Society Ltd to learn more about layout plans, amenities, and location advantages.",
-    url: "https://defencehousingsociety.com/download/brochure",
+    url: "https://defencehousingsociety.co.in/download/brochure",
     type: "website",
   },
 };

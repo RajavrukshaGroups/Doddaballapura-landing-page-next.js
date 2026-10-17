@@ -100,7 +100,7 @@ const ContactUs = () => {
         />
         <link
           rel="canonical"
-          href="https://defencehousingsociety.com/contact-us"
+          href="https://defencehousingsociety.co.in/contact-us"
         />
       </Helmet>
 
@@ -325,10 +325,10 @@ const ContactUs = () => {
                   </h3>
                   <p className="contact-info-text">
                     <a
-                      href="mailto:mail@defencehousingsociety.com"
+                      href="mailto:mail@defencehousingsociety.co.in"
                       className="contact-info-link"
                     >
-                      mail@defencehousingsociety.com
+                      mail@defencehousingsociety.co.in
                     </a>
                   </p>
                 </div>

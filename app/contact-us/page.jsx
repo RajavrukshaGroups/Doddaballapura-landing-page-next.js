@@ -5,13 +5,13 @@ export const metadata = {
   description:
     "Get in touch with Defence Housing Society for inquiries, support, membership information. Contact our team today.",
   alternates: {
-    canonical: "https://defencehousingsociety.com/contact-us",
+    canonical: "https://defencehousingsociety.co.in/contact-us",
   },
   openGraph: {
     title: "Contact Us | Defence Housing Society",
     description:
       "Get in touch with Defence Housing Society for inquiries, support, membership information. Contact our team today.",
-    url: "https://defencehousingsociety.com/contact-us",
+    url: "https://defencehousingsociety.co.in/contact-us",
     type: "website",
   },
 };

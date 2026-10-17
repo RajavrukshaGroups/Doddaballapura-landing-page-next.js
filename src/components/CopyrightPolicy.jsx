@@ -21,12 +21,12 @@ const CopyrightPolicy = () => {
               Welcome to the official website of Defence Habitat Housing Co-Operative Society Ltd. 
               By accessing or using this website (
               <a
-                href="https://defencehousingsociety.com"
+                href="https://defencehousingsociety.co.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-700 underline"
               >
-                https://defencehousingsociety.com
+                https://defencehousingsociety.co.in
               </a>{" "}
               /{" "}
               <a
@@ -156,23 +156,23 @@ const CopyrightPolicy = () => {
               </li>
               <li>
                 <strong>Email:</strong>{" "}
-                <a className="text-blue-700 underline" href="mailto:mail@defencehousingsociety.com">
-                  mail@defencehousingsociety.com
+                <a className="text-blue-700 underline" href="mailto:mail@defencehousingsociety.co.in">
+                  mail@defencehousingsociety.co.in
                 </a>{" "}
                 /{" "}
-                <a className="text-blue-700 underline" href="mailto:info@defencehousingsociety.com">
-                  info@defencehousingsociety.com
+                <a className="text-blue-700 underline" href="mailto:info@defencehousingsociety.co.in">
+                  info@defencehousingsociety.co.in
                 </a>
               </li>
               <li>
                 <strong>Website:</strong>{" "}
                 <a
                   className="text-blue-700 underline"
-                  href="https://defencehousingsociety.com"
+                  href="https://defencehousingsociety.co.in"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  https://defencehousingsociety.com
+                  https://defencehousingsociety.co.in
                 </a>{" "}
                 /{" "}
                 <a

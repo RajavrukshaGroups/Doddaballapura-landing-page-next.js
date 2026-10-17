@@ -1,0 +1,31 @@
+# Apache / LiteSpeed configuration for Next.js Static Export
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # 1. Force HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # 2. Serve existing files directly (CSS, JS, images, PDF, sitemap.xml, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # 3. Handle folder-level routes that have matching .html files (prevents directory redirect / 403)
+  RewriteCond %{DOCUMENT_ROOT}/blogs.html -f
+  RewriteRule ^blogs/?$ blogs.html [L]
+
+  RewriteCond %{DOCUMENT_ROOT}/download.html -f
+  RewriteRule ^download/?$ download.html [L]
+
+  # 4. Rewrite clean URLs to their corresponding .html files (e.g. /about-us -> /about-us.html)
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+
+  # 5. Rewrite directory URLs with index.html (if any)
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+?)/?$ $1/index.html [L]
+
+  # 6. Custom 404 Error Page
+  ErrorDocument 404 /404.html
+</IfModule>

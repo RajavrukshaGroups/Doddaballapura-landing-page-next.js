@@ -1,200 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 
-<!-- Created for Defence Housing Society -->
+<!-- Created for Defence Housing Society - Canonical Sitemap -->
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+    <!-- Home Page -->
     <url>
-        <loc>https://defencehousingsociety.com/</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
+        <loc>https://defencehousingsociety.co.in/</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
         <priority>1.0</priority>
     </url>
 
+    <!-- Primary Pages -->
     <url>
-        <loc>https://defencehousingsociety.com/about-us</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
+        <loc>https://defencehousingsociety.co.in/about-us</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
+        <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://defencehousingsociety.com/projects/tapasihalli</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
+        <loc>https://defencehousingsociety.co.in/gallery</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://defencehousingsociety.co.in/latest-news</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
+        <priority>0.9</priority>
+    </url>
+
+    <url>
+        <loc>https://defencehousingsociety.co.in/contact-us</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Downloads -->
+    <url>
+        <loc>https://defencehousingsociety.co.in/download/brochure</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://defencehousingsociety.com/projects/marasandra</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
+        <loc>https://defencehousingsociety.co.in/download/application</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
         <priority>0.8</priority>
     </url>
 
-    <url>
-        <loc>https://defencehousingsociety.com/download/brochure</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/download/application</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>0.8</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/latest-news</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/contact-us</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/faq</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/gallery</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/memberlogin</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/online_application</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/terms-conditions</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/privacy-policy</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/copy-right-policy</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/my-project</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/project-paid-amount</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/transferproject</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/extra-charges-amount</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/view-project-status</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/digitalmarketing-googleAds</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/memberformwrapper</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/newonline_application</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/dashboard</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/view-site-confirmation</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/reset-password</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/ContactAdmin</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/otpverification</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.com/forgotPassword</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://defencehousingsociety.co.in</loc>
-        <lastmod>2026-06-09T07:00:30+01:00</lastmod>
-        <priority>1.0</priority>
-    </url>
-
+    <!-- Blogs & Articles -->
     <url>
         <loc>https://defencehousingsociety.co.in/blogs</loc>
-        <lastmod>2026-10-10T07:00:30+01:00</lastmod>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://defencehousingsociety.co.in/blogs/why-doddaballapur-is-emerging-as-a-residential-destination-in-north-bangalore</loc>
-        <lastmod>2026-10-10T07:00:30+01:00</lastmod>
-        <priority>0.9</priority>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://defencehousingsociety.co.in/blogs/top-reasons-to-buy-residential-plots-in-doddaballapur</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Legal & Policies -->
+    <url>
+        <loc>https://defencehousingsociety.co.in/terms-and-conditions</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://defencehousingsociety.co.in/privacy-policy</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
+        <priority>0.6</priority>
+    </url>
+
+    <url>
+        <loc>https://defencehousingsociety.co.in/copyright-policy</loc>
+        <lastmod>2026-10-17T07:00:00+00:00</lastmod>
+        <priority>0.6</priority>
     </url>
 
 </urlset>

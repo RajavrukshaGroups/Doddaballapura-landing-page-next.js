@@ -1,5 +1,5 @@
 User-agent: *
-Sitemap: https://defencehousingsociety.com/sitemap.xml
+Sitemap: https://defencehousingsociety.co.in/sitemap.xml
 
 User-agent: *
 Allow: /

@@ -6,7 +6,7 @@
  * - Option 2: Provide `NEXT_PUBLIC_API_BASE_URL` in your environment (.env.local).
  */
 
-const LIVE_BASE_URL = "https://adminpanel.defencehousingsociety.com/defenceWebsiteRoutes";
+const LIVE_BASE_URL = "https://adminpanel.defencehousingsociety.co.in/defenceWebsiteRoutes";
 //const LOCAL_BASE_URL = "http://localhost:4000/defenceWebsiteRoutes";
 
 // In production (npm run build), defaults to false (LIVE_BASE_URL).

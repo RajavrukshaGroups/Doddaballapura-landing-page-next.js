@@ -4,7 +4,7 @@ export const metadata = {
   title: "Privacy Policy | Defence Habitat Housing Co-Operative Society Ltd",
   description: "Read the Privacy Policy of Defence Habitat Housing Co-Operative Society Ltd to understand how we collect, protect, and use your personal information.",
   alternates: {
-    canonical: "https://defencehousingsociety.com/privacy-policy",
+    canonical: "https://defencehousingsociety.co.in/privacy-policy",
   },
 };
 
